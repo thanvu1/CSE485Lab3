@@ -34,7 +34,10 @@ class TaskController extends Controller
             'description' => 'required',
         ]);
 
-        Task::create($request->all());
+        $data = $request->all();
+        $data['completed'] = $request->has('completed') ? 1 : 0;
+
+        Task::create($data);
 
         return redirect()->route('tasks.index')->with('success', 'Task created successfully.');
     }

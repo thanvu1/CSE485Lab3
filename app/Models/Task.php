@@ -13,12 +13,12 @@ class Task extends Model
     //  *
     //  * @var array
     //  */
-    // protected $fillable = [
-    //     'title',
-    //     'description',
-    //     'long_description',
-    //     'completed',
-    // ];
+    protected $fillable = [
+        'title',
+        'description',
+        'long_description',
+        'completed',
+    ];
 
     // /**
     //  * Cấu hình kiểu dữ liệu tự động cast.
